@@ -2,6 +2,7 @@ package finalProject.controller;
 
 import finalProject.model.User;
 import finalProject.service.UserService;
+import finalProject.utils.Session;
 
 public class UserController {
 
@@ -15,6 +16,6 @@ public class UserController {
     }
 
     public static void logout() {
-        UserService.userOnline = null;
+        Session.ofLine();
     }
 }

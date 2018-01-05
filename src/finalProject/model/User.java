@@ -11,8 +11,13 @@ public class User {
     private UserType userType;
 
     public User() {
+    }
+
+    public User(User other) {
+        this(other.getId(), other.getUserName(), other.getPassword(), other.getCountry(), other.userType);
 
     }
+
 
     public User(long id) {
         this.id = id;

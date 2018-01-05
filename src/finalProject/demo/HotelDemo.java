@@ -6,7 +6,7 @@ import finalProject.utils.GenerateID;
 
 public class HotelDemo {
     public static void main(String[] args) throws Exception {
-        Hotel hotel1 = new Hotel(1000, "Eney", "Ukraine", "Lviv", "I. Franko st.");
+        Hotel hotel1 = new Hotel(3000, "Eney", "Ukraine", "Lviv", "I. Franko st.");
         Hotel hotel2 = new Hotel(2, "Panorama", "Ukraine", "Lviv", "I. Franko st.");
         Hotel hotel3 = new Hotel(GenerateID.generateID(), "Leopolis", "Ukraine", "Lviv", "I. Franko st.");
         HotelController.addHotel(hotel1);

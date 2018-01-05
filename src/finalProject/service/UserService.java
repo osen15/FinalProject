@@ -2,10 +2,9 @@ package finalProject.service;
 
 import finalProject.DAO.UserDAO;
 import finalProject.model.User;
+import finalProject.utils.Session;
 
 public class UserService {
-
-    public static User userOnline;
 
     public static User registerUser(User user) throws Exception {
         if (checkUser(user.getId()))
@@ -22,8 +21,9 @@ public class UserService {
 
         for (User user : UserDAO.getAll()) {
             if (user.getUserName().equals(userName) && user.getPassword().equals(password)) {
-                isOnline(user);
+                Session.setUserOnLine(user);
 
+                System.out.println(Session.getUser());
                 return;
             }
         }
@@ -52,20 +52,6 @@ public class UserService {
         return false;
     }
 
-
-    public static void isOnline(User user) {
-        if (userOnline != null) {
-            userOnline = user;
-        }
-    }
-
-    public static void logout() {
-        userOnline = null;
-    }
-
-    public static User getUserOnline() {
-        return userOnline;
-    }
 
 
 }
