@@ -23,6 +23,8 @@ public class UserDemo {
 
        // UserService.logout();
        // System.out.println(UserService.userOnline);
-
+        ArrayList<User> users = new ArrayList<>(1);
+       // users.add(user);
+        System.out.println(users);
     }
 }
